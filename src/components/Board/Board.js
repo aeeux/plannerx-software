@@ -30,7 +30,7 @@ function Board(props) {
           )}
         </div>
       </div>
-      <div className="board_cards custom-scroll">
+      <div className="board_cards cursor-pointer custom-scroll">
         {props.board?.cards?.map((item) => (
           <Card
             key={item.id}
