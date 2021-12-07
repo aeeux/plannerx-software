@@ -9,7 +9,7 @@ function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false)
 
   return (
-    <div className="board">
+    <div className="board bg-board-color px-4 py-3 rounded-lg">
       <div className="board_header cursor-not-allowed">
         <p className="board_header_title">
           {props.board?.title}
