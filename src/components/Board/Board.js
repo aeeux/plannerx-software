@@ -25,7 +25,7 @@ function Board(props) {
               class="board_dropdown"
               onClose={() => setShowDropdown(false)}
             >
-              <p onClick={() => props.removeBoard()}>Delete Board</p>
+              <p className="cursor-pointer" onClick={() => props.removeBoard()}>Delete Board</p>
             </Dropdown>
           )}
         </div>
