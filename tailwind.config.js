@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         //background colors
         'board-background': '#B33F40',
+        'board-color': '#8658A5',
       },
     },
     height: {
