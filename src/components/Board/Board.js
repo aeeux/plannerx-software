@@ -10,7 +10,7 @@ function Board(props) {
 
   return (
     <div className="board bg-board-color px-4 py-3 rounded-lg">
-      <div className="board_header cursor-not-allowed">
+      <div className="board_header cursor-not-allowed flex flex-row">
         <p className="board_header_title">
           {props.board?.title}
           <span>{props.board?.cards?.length || 0}</span>
