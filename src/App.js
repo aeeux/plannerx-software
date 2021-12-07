@@ -121,9 +121,9 @@ function App() {
   return (
     <div className="app">
       <div className="app_nav">
-        <h1 className="text-red-600 text-3xl">PlannerX Kanban Board</h1>
+        <h1 className="text-red-600 text-3xl mb-20">PlannerX Kanban Board</h1>
       </div>
-      <div className="bg-yellow-300 app_boards_container">
+      <div className="app_boards_container">
         <div className="app_boards">
           {boards.map((item) => (
             <Board
