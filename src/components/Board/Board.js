@@ -10,13 +10,13 @@ function Board(props) {
 
   return (
     <div className="board">
-      <div className="board_header">
+      <div className="board_header cursor-not-allowed">
         <p className="board_header_title">
           {props.board?.title}
           <span>{props.board?.cards?.length || 0}</span>
         </p>
         <div
-          className="board_header_title_more"
+          className="cursor-pointer board_header_title_more"
           onClick={() => setShowDropdown(true)}
         >
           <MoreHorizontal />
