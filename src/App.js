@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './index.css';
+import './index.css'
 import Board from './components/Board/Board'
 import Editable from './components/Editable/Editable'
 
@@ -121,10 +121,12 @@ function App() {
   return (
     <div className="app">
       <div className="app_nav">
-        <h1 className="text-red-600 text-3xl mb-20 font-semibold">Planner X Kanban Board</h1>
+        <h1 className=" text-3xl mb-20 font-semibold">
+          Planner X Kanban Board
+        </h1>
       </div>
       <div className="app_boards_container">
-        <div className="app_boards bg-board-background w-5/6 space-x-28 flex">
+        <div className="app_board space-x-10 flex w-1/2">
           {boards.map((item) => (
             <Board
               key={item.id}
