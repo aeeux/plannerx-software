@@ -124,7 +124,7 @@ function App() {
         <h1 className="text-red-600 text-3xl mb-20">PlannerX Kanban Board</h1>
       </div>
       <div className="app_boards_container">
-        <div className="app_boards">
+        <div className="app_boards bg-board-background w-2/6 flex">
           {boards.map((item) => (
             <Board
               key={item.id}
