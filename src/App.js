@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import './index.css';
 import Board from './components/Board/Board'
 import Editable from './components/Editable/Editable'
 
@@ -121,9 +121,9 @@ function App() {
   return (
     <div className="app">
       <div className="app_nav">
-        <h1>PlannerX Kanban Board</h1>
+        <h1 className="text-red-600 text-3xl">PlannerX Kanban Board</h1>
       </div>
-      <div className="app_boards_container">
+      <div className="bg-yellow-300 app_boards_container">
         <div className="app_boards">
           {boards.map((item) => (
             <Board
@@ -137,7 +137,7 @@ function App() {
               updateCard={updateCard}
             />
           ))}
-          <div className="app_boards_last">
+          <div className="app_boards_last cursor-pointer">
             <Editable
               displayClass="app_boards_add-board"
               editClass="app_boards_add-board_edit"
