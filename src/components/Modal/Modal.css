@@ -1,0 +1,4 @@
+
+.modal_content::-webkit-scrollbar {
+  width: 12px !important;
+}
