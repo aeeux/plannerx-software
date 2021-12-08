@@ -33,7 +33,7 @@ How it is made:
 * The software is based on Tailwind CSS, JavaScript, styled components & React while we have added Gatsby for the landingpage
 * The website is based on modern & innovative design with focus in interaction design and the gestalt principles
 
-This is the repository to acess the software, <a href="https://github.com/lucasjolibois54/planning-x-website">click here</a> to visit the once for the Planner x website.
+This is the repository to access the software, <a href="https://github.com/lucasjolibois54/planning-x-website">click here</a> to visit the Planner X website repository.
 
 Use the `README.md` to get started.
 <br/>
