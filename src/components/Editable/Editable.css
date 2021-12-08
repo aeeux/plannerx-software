@@ -1,0 +1,35 @@
+.editable {
+  width: 100%;
+}
+
+.editable_display {
+  padding: 6px 12px;
+  border-radius: 3px;
+  background-color: #eee;
+  color: #000;
+  cursor: pointer;
+  width: fit-content;
+  transition: 200ms;
+}
+
+.editable_display:hover {
+  background-color: #ddd;
+}
+
+.editable_edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editable_edit input {
+  border: 2px solid #0079bf;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.editable_edit_footer button:active {
+  transform: translateY(2px);
+}
