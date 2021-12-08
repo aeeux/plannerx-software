@@ -1,0 +1,27 @@
+
+
+.cardinfo_box ul li {
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cardinfo_box_task_checkbox p {
+  flex: 1;
+  line-height: 18px;
+}
+
+.cardinfo_box_task_checkbox .completed {
+  text-decoration-line: line-through;
+}
+
+.cardinfo_box input[type="date"] {
+  width: fit-content;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+}
