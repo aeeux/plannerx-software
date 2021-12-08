@@ -124,9 +124,12 @@ function App() {
       <div className="app_nav">
         <BoardTitle>
         <BoardTitleh1 className="headerh1 text-3xl mb-20 font-semibold">
-          Planner X Kanban Board
+          Planner X- Kanban Board
         </BoardTitleh1>
         </BoardTitle>
+        <BoardUnderTitleh3>
+        Created with 💜 by PlannerX
+        </BoardUnderTitleh3>
       </div>
       <div className="app_boards_container">
         <div className="app_board space-x-10 flex w-1/2">
@@ -164,11 +167,23 @@ export default App
 
 const BoardTitle = styled.div`
 text-align: center;
-margin-top: 2em;
+margin-top: 3em;
 `
 
 const BoardTitleh1 = styled.h1`
 font-size: 3em;
 font-weight: bold;
 color: #1F262A;
+margin-bottom: 20px;
+padding-bottom: 0;
+`
+
+const BoardUnderTitleh3 = styled.h1`
+font-size: 1.3em;
+font-weight: light;
+color: #A5A5A5;
+text-align: center;
+margin-top: 0;
+padding-top: 0;
+margin-bottom: 7rem;
 `
