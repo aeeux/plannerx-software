@@ -127,6 +127,16 @@ function App() {
       </div>
       <div className="app_boards_container">
         <div className="app_board space-x-10 flex w-1/2">
+          <div className="app_boards_last cursor-pointer">
+            <Editable
+              displayClass="app_boards_add-board"
+              editClass="app_boards_add-board_edit"
+              placeholder="Enter Board Name"
+              text="Add Board"
+              buttonText="Add Board"
+              onSubmit={addboardHandler}
+            />
+          </div>
           {boards.map((item) => (
             <Board
               key={item.id}
@@ -139,16 +149,6 @@ function App() {
               updateCard={updateCard}
             />
           ))}
-          <div className="app_boards_last cursor-pointer">
-            <Editable
-              displayClass="app_boards_add-board"
-              editClass="app_boards_add-board_edit"
-              placeholder="Enter Board Name"
-              text="Add Board"
-              buttonText="Add Board"
-              onSubmit={addboardHandler}
-            />
-          </div>
         </div>
       </div>
     </div>
