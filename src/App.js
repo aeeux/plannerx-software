@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 import './index.css'
 import Board from './components/Board/Board'
 import Editable from './components/Editable/Editable'
@@ -121,9 +122,11 @@ function App() {
   return (
     <div className="app">
       <div className="app_nav">
-        <h1 className=" text-3xl mb-20 font-semibold">
+        <BoardTitle>
+        <BoardTitleh1 className="headerh1 text-3xl mb-20 font-semibold">
           Planner X Kanban Board
-        </h1>
+        </BoardTitleh1>
+        </BoardTitle>
       </div>
       <div className="app_boards_container">
         <div className="app_board space-x-10 flex w-1/2">
@@ -151,8 +154,21 @@ function App() {
           ))}
         </div>
       </div>
+      
     </div>
   )
 }
 
 export default App
+
+
+const BoardTitle = styled.div`
+text-align: center;
+margin-top: 2em;
+`
+
+const BoardTitleh1 = styled.h1`
+font-size: 3em;
+font-weight: bold;
+color: #1F262A;
+`
