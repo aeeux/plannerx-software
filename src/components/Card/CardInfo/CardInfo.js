@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Calendar, CheckSquare, List, Tag, Trash, Type, X } from 'react-feather'
+import styled from 'styled-components'
 
 import Modal from '../../Modal/Modal'
 import Editable from '../../Editable/Editable'
+import './CardInfo.css'
 
 function CardInfo(props) {
   const colors = [
@@ -105,68 +107,67 @@ function CardInfo(props) {
 
   return (
     <Modal onClose={props.onClose}>
-      <div className="cardinfo">
-        <div className="cardinfo_box">
-          <div className="cardinfo_box_title">
-            <Type />
-            <p>Title</p>
-          </div>
+      <CardElement className="cardinfo">
+        <CardInfoBox className="cardinfo_box">
+          <CardInfoBoxTitle className="cardinfo_box_title">
+            <Type className="h-18 w-18 cursor-pointer" />
+            <p className="font-bold text-lg">Title</p>
+          </CardInfoBoxTitle>
           <Editable
             defaultValue={values.title}
             text={values.title}
             placeholder="Enter Title"
             onSubmit={updateTitle}
           />
-        </div>
+        </CardInfoBox>
 
-        <div className="cardinfo_box">
-          <div className="cardinfo_box_title">
-            <List />
-            <p>Description</p>
-          </div>
+        <CardInfoBox className="cardinfo_box">
+          <CardInfoBoxTitle className="cardinfo_box_title">
+            <List className="h-18 w-18 cursor-pointer" />
+            <p className="font-bold text-lg">Description</p>
+          </CardInfoBoxTitle>
           <Editable
             defaultValue={values.desc}
             text={values.desc || 'Add a Description'}
             placeholder="Enter description"
             onSubmit={updateDesc}
           />
-        </div>
+        </CardInfoBox>
 
-        <div className="cardinfo_box">
-          <div className="cardinfo_box_title">
-            <Calendar />
-            <p>Date</p>
-          </div>
+        <CardInfoBox className="cardinfo_box">
+          <CardInfoBoxTitle className="cardinfo_box_title">
+            <Calendar className="w-6 cursor-pointer" />
+            <p className="font-bold text-lg">Date</p>
+          </CardInfoBoxTitle>
           <input
             type="date"
             defaultValue={values.date}
             min={new Date().toISOString().substr(0, 10)}
             onChange={(event) => updateDate(event.target.value)}
           />
-        </div>
+        </CardInfoBox>
 
-        <div className="cardinfo_box">
-          <div className="cardinfo_box_title">
-            <Tag />
-            <p>Labels</p>
-          </div>
-          <div className="cardinfo_box_labels">
+        <CardInfoBox className="cardinfo_box">
+          <CardInfoBoxTitle className="cardinfo_box_title">
+            <Tag className="h-18 w-18 cursor-pointer " />
+            <p className="font-bold text-lg">Labels</p>
+          </CardInfoBoxTitle>
+          <CardInfoBoxLabels className="cardinfo_box_labels">
             {values.labels?.map((item, index) => (
-              <label
+              <Label
                 key={index}
                 style={{ backgroundColor: item.color, color: '#fff' }}
               >
                 {item.text}
                 <X onClick={() => removeLabel(item)} />
-              </label>
+              </Label>
             ))}
-          </div>
-          <ul>
+          </CardInfoBoxLabels>
+          <ul className="gap-1 flex space-x-3">
             {colors.map((item, index) => (
               <li
                 key={index + item}
                 style={{ backgroundColor: item }}
-                className={selectedColor === item ? 'li_active' : ''}
                 onClick={() => setSelectedColor(item)}
               />
             ))}
@@ -178,26 +179,30 @@ function CardInfo(props) {
               addLabel({ color: selectedColor, text: value })
             }
           />
-        </div>
+        </CardInfoBox>
 
-        <div className="cardinfo_box">
-          <div className="cardinfo_box_title">
-            <CheckSquare />
-            <p>Tasks</p>
-          </div>
-          <div className="cardinfo_box_progress-bar">
-            <div
+        <CardInfoBox className="cardinfo_box">
+          <CardInfoBoxTitle className="cardinfo_box_title">
+            <CheckSquare className="h-18 w-18 cursor-pointer " />
+            <p className="font-bold text-lg">Tasks</p>
+          </CardInfoBoxTitle>
+          <CardInfoBoxProgressBar className="cardinfo_box_progress-bar">
+            <CardInfoBoxProgress
               className="cardinfo_box_progress"
               style={{
                 width: `${calculatePercent()}%`,
                 backgroundColor: calculatePercent() === 100 ? 'limegreen' : '',
               }}
             />
-          </div>
-          <div className="cardinfo_box_task_list">
+          </CardInfoBoxProgressBar>
+          <CardInfoBoxTaskList className="cardinfo_box_task_list">
             {values.tasks?.map((item) => (
-              <div key={item.id} className="cardinfo_box_task_checkbox">
+              <CardInfoBoxTaskCheckbox
+                key={item.id}
+                className="cardinfo_box_task_checkbox"
+              >
                 <input
+                  className="w-18 cursor-pointer outline-none"
                   type="checkbox"
                   defaultChecked={item.completed}
                   onChange={(event) =>
@@ -206,18 +211,76 @@ function CardInfo(props) {
                 />
                 <p className={item.completed ? 'completed' : ''}>{item.text}</p>
                 <Trash onClick={() => removeTask(item.id)} />
-              </div>
+              </CardInfoBoxTaskCheckbox>
             ))}
-          </div>
+          </CardInfoBoxTaskList>
           <Editable
             text={'Add a Task'}
             placeholder="Enter task"
             onSubmit={addTask}
           />
-        </div>
-      </div>
+        </CardInfoBox>
+      </CardElement>
     </Modal>
   )
 }
 
 export default CardInfo
+
+const CardElement = styled.div`
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 550px;
+  width: fit-content;
+  max-width: 650px;
+  height: fit-content;
+`
+const CardInfoBox = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+const CardInfoBoxTitle = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`
+const CardInfoBoxLabels = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+`
+const Label = styled.div`
+  border-radius: 40px;
+  background-color: gray;
+  color: #fff;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`
+const CardInfoBoxProgressBar = styled.div`
+  width: 100%;
+  border-radius: 30px;
+  height: 10px;
+  border: 1px solid #ccc;
+`
+const CardInfoBoxProgress = styled.div`
+  height: 100%;
+  border-radius: 30px;
+  background-color: skyblue;
+  width: 0;
+  transition: 200ms;
+`
+const CardInfoBoxTaskList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`
+const CardInfoBoxTaskCheckbox = styled.div`
+  display: flex;
+  gap: 10px;
+`
