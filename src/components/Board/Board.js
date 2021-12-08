@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { MoreHorizontal } from 'react-feather'
 import styled from 'styled-components'
-import { motion, AnimatePresence } from 'framer-motion'
 
 import './Board.css'
 
@@ -13,14 +12,16 @@ function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false)
 
   return (
-    <div className="board">
-      <div className="board_header cursor-not-allowed flex flex-row">
-        <p className="board_header_title">
+    <BoardCanvas className="">
+      <BoardHeader className="flex flex-row">
+        <BoardHeaderTitle className="">
           {props.board?.title}
-          <span>{props.board?.cards?.length || 0}</span>
-        </p>
-        <div
-          className="cursor-pointer board_header_title_more"
+          <BoardHeaderAmount>
+            {props.board?.cards?.length || 0}
+          </BoardHeaderAmount>
+        </BoardHeaderTitle>
+        <BoardHeaderTitleMore
+          className=""
           onClick={() => setShowDropdown(true)}
         >
           <MoreHorizontal />
@@ -29,14 +30,14 @@ function Board(props) {
               class="board_dropdown"
               onClose={() => setShowDropdown(false)}
             >
-              <p className="cursor-pointer" onClick={() => props.removeBoard()}>
+              <p className="" onClick={() => props.removeBoard()}>
                 Delete Board
               </p>
             </Dropdown>
           )}
-        </div>
-      </div>
-      <Container className="board_cards cursor-pointer custom-scroll">
+        </BoardHeaderTitleMore>
+      </BoardHeader>
+      <BoardCards className=" custom-scroll">
         <Editable
           text="+"
           placeholder="Enter Card Title"
@@ -57,20 +58,66 @@ function Board(props) {
             />
           </TaskItem>
         ))}
-      </Container>
-    </div>
+      </BoardCards>
+    </BoardCanvas>
   )
 }
 
 export default Board
 
-const Container = styled.div``
+const BoardCanvas = styled.div`
+  min-width: 290px;
+  width: 290px;
+  max-height: 100%;
+  flex-basis: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`
+
+const BoardHeader = styled.div`
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const BoardHeaderTitle = styled.div`
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+`
+
+const BoardHeaderAmount = styled.div`
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid rgba(184, 184, 184, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+`
+
+const BoardHeaderTitleMore = styled.div`
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+`
 
 const TaskItem = styled.div`
-  background-color: whitesmoke;
+  padding: 10px;
+`
+
+const BoardCards = styled.div`
+  background-color: #f8f8f8;
+  padding: 10px;
   border-radius: 5px;
-  padding: 3rem 3rem 4.5rem;
-  grid-gap: 1.5rem;
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
 `
