@@ -18,6 +18,29 @@
   </p>
 </div><br/><br/>
 
+
+
+
+<!-- ABOUT THE PROJECT -->
+# About The Project
+<br/>
+
+
+Planner X is a revolutionary, free to use highly innovative software solution helping your work team traking their tasks and roles! Using our system, you'll be able to distribute work tasks/ assignments to your team through the app. The members of your team will later on be able to mark the task when it's done. It's simple, and it is free! What's not to like?
+
+How it is made:
+* Planner X is a SPA SaaS web application, where the software works both offline & online
+* The software is based on Tailwind CSS, JavaScript, styled components & React while we have added Gatsby for the landingpage
+* The website is based on modern & innovative design with focus in interaction design and the gestalt principles
+
+This is the repository to acess the software, <a href="https://github.com/lucasjolibois54/planning-x-website">click here</a> to visit the once for the Planner x website.
+
+Use the `README.md` to get started.
+<br/>
+<br/>
+<br/>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
