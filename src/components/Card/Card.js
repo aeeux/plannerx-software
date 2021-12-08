@@ -107,6 +107,7 @@ export default Card
 const CardItem = styled.div`
   padding: 10px;
   display: flex;
+  cursor: move;
   flex-direction: column;
   gap: 10px;
   background-color: #fff;
