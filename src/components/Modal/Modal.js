@@ -36,6 +36,6 @@ const ModalContent = styled.div`
   overflow-y: auto;
   max-height: 95vh;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 10px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.12);
 `
