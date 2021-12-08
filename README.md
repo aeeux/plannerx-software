@@ -1,3 +1,23 @@
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="planner-x.netlify.app">
+    <img src="https://github.com/lucasjolibois54/planning-x-website/blob/main/src/images/Group%2024.png?raw=true" alt="Logo" width="auto" height="100">
+  </a>
+
+  <h3 align="center">Planner X- the software: readme</h3>
+
+  <p align="center">
+    Your work based management system!
+    <br />
+    <a href="https://github.com/lucasjolibois54/planning-x-website/"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://plannerx-software.netlify.app/">View Demo</a>
+  </p>
+</div><br/><br/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
