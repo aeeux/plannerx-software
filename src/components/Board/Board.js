@@ -12,6 +12,7 @@ function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false)
 
   return (
+    <BoardColor>
     <BoardCanvas className="">
       <BoardHeader className="flex flex-row">
         <BoardHeaderTitle className="">
@@ -60,6 +61,7 @@ function Board(props) {
         ))}
       </BoardCards>
     </BoardCanvas>
+    </BoardColor>
   )
 }
 
@@ -120,4 +122,9 @@ const BoardCards = styled.div`
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
+`
+const BoardColor = styled.div`
+background-color: #DCE4EC;
+border-radius: 10px;
+padding: 10px;
 `
