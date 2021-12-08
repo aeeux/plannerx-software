@@ -11,7 +11,7 @@
   <p align="center">
     Your work based management system!
     <br />
-    <a href="https://github.com/lucasjolibois54/planning-x-website/"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/aeeux/plannerx-software"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://plannerx-software.netlify.app/">View Demo</a>
