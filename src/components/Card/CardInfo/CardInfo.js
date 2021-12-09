@@ -8,13 +8,13 @@ import './CardInfo.css'
 
 function CardInfo(props) {
   const colors = [
-    '#a8193d',
-    '#4fcc25',
-    '#1ebffa',
-    '#8da377',
-    '#9975bd',
-    '#cf61a1',
-    '#240959',
+    '#F0D8DE',
+    '#DEFFFB',
+    '#B7EBFD',
+    '#DCE8D1',
+    '#E0D5F5',
+    '#F7C1E0',
+    '#E3E1E7',
   ]
 
   const [selectedColor, setSelectedColor] = useState()
@@ -157,7 +157,7 @@ function CardInfo(props) {
             {values.labels?.map((item, index) => (
               <Label
                 key={index}
-                style={{ backgroundColor: item.color, color: '#fff' }}
+                style={{ backgroundColor: item.color, color: '#3E5352' }}
               >
                 {item.text}
                 <X onClick={() => removeLabel(item)} />
