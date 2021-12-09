@@ -8,7 +8,7 @@
   background-color: #eee;
   color: #000;
   cursor: pointer;
-  width: fit-content;
+  width: 100%;
   transition: 200ms;
 }
 
