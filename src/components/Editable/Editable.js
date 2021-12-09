@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { X } from 'react-feather'
-import './Editable.css'
 
 function Editable(props) {
   const [isEditable, setIsEditable] = useState(false)
@@ -18,10 +17,12 @@ function Editable(props) {
   }
 
   return (
-    <EditableItem className="editable">
+    <EditableItem className="">
       {isEditable ? (
-        <form
-          className={`editable_edit ${props.editClass ? props.editClass : ''}`}
+        <EditableEdit
+          className={`${(<EditableEdit />)} ${
+            props.displayClass ? props.displayClass : ''
+          }`}
           onSubmit={submission}
         >
           <input
@@ -45,18 +46,16 @@ function Editable(props) {
               className="w-10 cursor-pointer"
             />
           </EditableFooter>
-        </form>
+        </EditableEdit>
       ) : (
-        <div>
-          <p
-            className={`editable_display ${
-              props.displayClass ? props.displayClass : ''
-            }`}
-            onClick={() => setIsEditable(true)}
-          >
-            {props.text}
-          </p>
-        </div>
+        <EditableDisplay
+          className={`${(<EditableDisplay />)} ${
+            props.displayClass ? props.displayClass : ''
+          }`}
+          onClick={() => setIsEditable(true)}
+        >
+          {props.text}
+        </EditableDisplay>
       )}
     </EditableItem>
   )
@@ -72,4 +71,26 @@ const EditableFooter = styled.div`
   display: flex;
   gap: 8px;
   align-items: center;
+`
+
+const EditableDisplay = styled.div`
+  padding: 6px 12px;
+  border-radius: 3px;
+  background-color: #2e3848;
+  color: #eee;
+  cursor: pointer;
+  width: 100%;
+  transition: 300ms ease-in-out;
+  text-align: center;
+  font-weight: bold;
+  &:hover {
+    background-color: #0f1013;
+    transition: 300ms ease-in-out;
+  }
+`
+
+const EditableEdit = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `
