@@ -143,7 +143,6 @@ function App() {
               onSubmit={addboardHandler}
             />
           </div>
-          <div className="grid grid-cols-3 gap-12">
           {boards.map((item) => (
             <Board
               key={item.id}
@@ -156,7 +155,6 @@ function App() {
               updateCard={updateCard}
             />
           ))}
-        </div>
         </div>
       </div>
       
