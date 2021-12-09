@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { MoreHorizontal } from 'react-feather'
 import styled from 'styled-components'
-import AddBoard from "../Editable/AddBoard"
+import AddBoard from '../Editable/AddBoard'
 
 import './Board.css'
 
 import Card from '../Card/Card'
 import Dropdown from '../Dropdown/Dropdown'
-import Editable from '../Editable/Editable'
 
 function Board(props) {
   const [showDropdown, setShowDropdown] = useState(false)
@@ -42,7 +41,7 @@ function Board(props) {
             )}
           </BoardHeaderTitleMore>
         </BoardHeader>
-        <AddBoard 
+        <AddBoard
           className=""
           text="+"
           placeholder="Enter Card Title"
@@ -101,7 +100,7 @@ const BoardHeaderTitle = styled.div`
 const BoardHeaderAmount = styled.div`
   font-weight: bold;
   font-size: 1rem;
-  background-color: #2E3848;
+  background-color: #2e3848;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
