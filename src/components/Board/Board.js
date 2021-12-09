@@ -42,7 +42,7 @@ function Board(props) {
             )}
           </BoardHeaderTitleMore>
         </BoardHeader>
-        <AddBoard
+        <AddBoard 
           className=""
           text="+"
           placeholder="Enter Card Title"
