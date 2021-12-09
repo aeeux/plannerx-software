@@ -23,7 +23,6 @@ const LightTheme = {
   labelColor: '#3E5352',
   labelBackground: '#DEFFE5',
   cardItemBackground: '#FFF',
-
 }
 
 const DarkTheme = {
@@ -242,7 +241,6 @@ const BoardUnderTitleh3 = styled.h3`
 const AppBoardsContainer = styled.div`
   max-width: 1600px;
   padding: 50px;
-  background-color: ${(props) => props.theme.pageBackground};
 `
 const AppBoardsAddCard = styled.div`
   display: flex;
