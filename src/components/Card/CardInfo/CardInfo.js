@@ -140,7 +140,7 @@ function CardInfo(props) {
             <Calendar className="w-6 cursor-pointer" />
             <p className="font-bold text-lg">Date</p>
           </CardInfoBoxTitle>
-          <input
+          <CardInfoBoxDate
             type="date"
             defaultValue={values.date}
             min={new Date().toISOString().substr(0, 10)}
@@ -160,13 +160,17 @@ function CardInfo(props) {
                 style={{ backgroundColor: item.color, color: '#3E5352' }}
               >
                 {item.text}
-                <X  className="cursor-pointer" onClick={() => removeLabel(item)} />
+                <X
+                  className="cursor-pointer"
+                  onClick={() => removeLabel(item)}
+                />
               </Label>
             ))}
           </CardInfoBoxLabels>
           <ul className="gap-1 flex space-x-3">
             {colors.map((item, index) => (
               <li
+                className="list-none w-18 h-18 rounded-lg cursor-pointer "
                 key={index + item}
                 style={{ backgroundColor: item }}
                 onClick={() => setSelectedColor(item)}
@@ -256,7 +260,7 @@ const CardInfoBoxLabels = styled.div`
 `
 const Label = styled.div`
   border-radius: 7px;
-  background-color: #DEFFE5;
+  background-color: #deffe5;
   color: #fff;
   padding: 4px 8px;
   display: flex;
@@ -284,4 +288,13 @@ const CardInfoBoxTaskList = styled.div`
 const CardInfoBoxTaskCheckbox = styled.div`
   display: flex;
   gap: 10px;
+`
+
+const CardInfoBoxDate = styled.input`
+  width: fit-content;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
 `
