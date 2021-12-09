@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import './index.css'
 import Board from './components/Board/Board'
-import Editable from './components/Editable/Editable'
-import "./App.css"
-import LogoImg from "./components/images/PlannerX_Logo.svg"
-import ToggleSwitch from "./ToggleSwitch.js";
+import AddBoard from './components/Editable/AddBoard'
+import './App.css'
+import LogoImg from './components/images/PlannerX_Logo.svg'
+import ToggleSwitch from './ToggleSwitch.js'
 
 function App() {
   const [boards, setBoards] = useState(
@@ -135,12 +135,12 @@ function App() {
 
       <AppBoardsAddCard className="mb-16 justify-between ">
         <div className="flex space-x-5">
-        <img src={LogoImg} className="img-logo-header" alt="mockup" />
+          <img src={LogoImg} className="img-logo-header" alt="mockup" />
           <button className="website-back-to">Go back to website</button>
         </div>
         <div className="flex space-x-5">
-        <ToggleSwitch />
-          <Editable id="add-board-button"
+          <ToggleSwitch />
+          <AddBoard
             displayClass="app_boards_add-board"
             editClass="app_boards_add-board_edit"
             placeholder="Enter Board Name"
