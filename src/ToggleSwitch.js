@@ -36,15 +36,15 @@ const Toggle = styled.button`
   &:focus {
     outline: none;
   }
-  transition: all 0.5s ease;
+  transition: all 1.2s ease;
 `
 
 const Page = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.pageBackground};
-  transition: all 0.5s ease;
+  background-color: none;
+  transition: all 1.2s ease;
 `
 
 const Container = styled.div`
