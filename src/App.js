@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled, { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import './index.css'
 import Board from './components/Board/Board'
 import AddBoard from './components/Editable/AddBoard'
@@ -167,6 +167,7 @@ function App() {
 
   return (
     <ThemeProvider theme={themes[theme]}>
+      <GlobalStyle />
       <AppBoardsContainer className="mx-auto">
         <div className="app_nav">
           <BoardTitle>
@@ -214,6 +215,13 @@ function App() {
 }
 
 export default App
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${(props) => props.theme.pageBackground};
+  }
+    
+`
 
 const BoardTitle = styled.div`
   text-align: center;
