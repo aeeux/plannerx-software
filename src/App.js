@@ -9,14 +9,27 @@ import ToggleSwitch from './ToggleSwitch.js'
 
 const LightTheme = {
   pageBackground: '#F7F9FB',
-  titleColor: '#dc658b',
-  tagLineColor: 'black',
+  titleColor: '#171A1E',
+  subTitleColor: '#a5a5a5',
+  addButtonsbackground: '#2E3848',
+  addButtonstext: '#FFFFFF',
+  cardsAmount: '#2E3848',
+  modalBackground: '#F7F9FB',
+  modalText: '#181717',
+  modalInput: '#181717',
+
 }
 
 const DarkTheme = {
-  pageBackground: '#282c36',
-  titleColor: 'lightPink',
-  tagLineColor: 'lavender',
+  pageBackground: '#2E3848',
+  titleColor: '#F3F6FA',
+  subTitleColor: '#D1CACA',
+  addButtonsbackground: '#949FB0',
+  addButtonstext: '#FFF',
+  cardsAmount: '#2E3848',
+  modalBackground: '#2E3848',
+  modalText: '#FFFFFF',
+  modalInput: '#181717',
 }
 
 const themes = {
@@ -199,12 +212,12 @@ const BoardTitle = styled.div`
 const BoardTitleh1 = styled.h1`
   font-size: 3em;
   font-weight: bold;
-  color: #1f262a;
+  color: ${(props) => props.theme.titleColor};
   margin-bottom: 20px;
   padding-bottom: 0;
 `
 
-const BoardUnderTitleh3 = styled.h1`
+const BoardUnderTitleh3 = styled.h3`
   font-size: 1.3em;
   font-weight: light;
   color: #a5a5a5;
