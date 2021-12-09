@@ -10,7 +10,7 @@ function Card(props) {
   const [showDropdown, setShowDropdown] = useState(false)
   const [showModal, setShowModal] = useState(false)
 
-  const { id, title, date, tasks, labels } = props.card
+  const { id, title, desc, date, tasks, labels } = props.card
 
   const formatDate = (value) => {
     if (!value) return ''
@@ -83,6 +83,7 @@ function Card(props) {
           </CardTopMore>
         </CardTop>
         <CardTitle className="">{title}</CardTitle>
+        <CardTitle className="">{desc}</CardTitle>
         <CardFooter className="">
           {date && (
             <CardFooterItem className="">
@@ -131,8 +132,8 @@ const CardTopLabels = styled.div`
 const Label = styled.div`
   border-radius: 8px;
   padding: 4px 12px;
-  background-color: #DEFFE5;
-  color: #3E5352;
+  background-color: #deffe5;
+  color: #3e5352;
   width: fit-content;
 `
 const CardTopMore = styled.div`
