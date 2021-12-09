@@ -13,54 +13,58 @@ function Board(props) {
 
   return (
     <BoardColor>
-    <BoardCanvas className="">
-      <BoardHeader className="flex flex-row">
-        <BoardHeaderTitle className="">
-          {props.board?.title}
-          <BoardHeaderAmount>
-            {props.board?.cards?.length || 0}
-          </BoardHeaderAmount>
-        </BoardHeaderTitle>
-        <BoardHeaderTitleMore
-          className=""
-          onClick={() => setShowDropdown(true)}
-        >
-          <MoreHorizontal />
-          {showDropdown && (
-            <Dropdown
-              class="board_dropdown"
-              onClose={() => setShowDropdown(false)}
-            >
-              <p className="" onClick={() => props.removeBoard()}>
-                Delete Board
-              </p>
-            </Dropdown>
-          )}
-        </BoardHeaderTitleMore>
-      </BoardHeader>
-      <BoardCards className=" custom-scroll">
+      <BoardCanvas className="">
+        <BoardHeader className="flex flex-row">
+          <BoardHeaderTitle className="">
+            {props.board?.title}
+            <BoardHeaderAmount>
+              {props.board?.cards?.length || 0}
+            </BoardHeaderAmount>
+          </BoardHeaderTitle>
+          <BoardHeaderTitleMore
+            className=""
+            onClick={() => setShowDropdown(true)}
+          >
+            <MoreHorizontal />
+            {showDropdown && (
+              <Dropdown
+                class="p-10 w-10"
+                onClose={() => setShowDropdown(false)}
+              >
+                <p
+                  className="border-solid b-2 border-blue-500 cursor-pointer "
+                  onClick={() => props.removeBoard()}
+                >
+                  Delete Board
+                </p>
+              </Dropdown>
+            )}
+          </BoardHeaderTitleMore>
+        </BoardHeader>
         <Editable
+          className=""
           text="+"
           placeholder="Enter Card Title"
           displayClass="board_add-card"
           editClass="board_add-card_edit"
           onSubmit={(value) => props.addCard(props.board?.id, value)}
         />
-        {props.board?.cards?.map((item) => (
-          <TaskItem>
-            <Card
-              key={item.id}
-              card={item}
-              boardId={props.board.id}
-              removeCard={props.removeCard}
-              dragEntered={props.dragEntered}
-              dragEnded={props.dragEnded}
-              updateCard={props.updateCard}
-            />
-          </TaskItem>
-        ))}
-      </BoardCards>
-    </BoardCanvas>
+        <BoardCards className=" custom-scroll">
+          {props.board?.cards?.map((item) => (
+            <TaskItem>
+              <Card
+                key={item.id}
+                card={item}
+                boardId={props.board.id}
+                removeCard={props.removeCard}
+                dragEntered={props.dragEntered}
+                dragEnded={props.dragEnded}
+                updateCard={props.updateCard}
+              />
+            </TaskItem>
+          ))}
+        </BoardCards>
+      </BoardCanvas>
     </BoardColor>
   )
 }
@@ -96,13 +100,13 @@ const BoardHeaderTitle = styled.div`
 const BoardHeaderAmount = styled.div`
   font-weight: bold;
   font-size: 1rem;
-  background-color: #191A1C;
+  background-color: #191a1c;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
-  color: #DDE4EB;
+  color: #dde4eb;
 `
 
 const BoardHeaderTitleMore = styled.div`
@@ -127,7 +131,8 @@ const BoardCards = styled.div`
   overflow-y: auto;
 `
 const BoardColor = styled.div`
-background-color: #DCE4EC;
-border-radius: 10px;
-padding: 10px;
+  background-color: #dce4ec;
+  border-radius: 10px;
+  padding: 10px;
+  width: fit-content;
 `
