@@ -5,7 +5,7 @@
 .editable_display {
   padding: 6px 12px;
   border-radius: 3px;
-  background-color: #2E3848;
+  background-color: #0055df;
   color: #eee;
   cursor: pointer;
   width: 100%;
@@ -70,7 +70,7 @@
 }
 
 .add_board:hover {
-  background-color: #130f0f;
+  background-color: #ffffff;
   transition: 300ms ease-in-out;
 }
 

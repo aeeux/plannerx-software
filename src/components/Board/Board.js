@@ -101,7 +101,7 @@ const BoardHeaderTitle = styled.div`
 const BoardHeaderAmount = styled.div`
   font-weight: bold;
   font-size: 1rem;
-  background-color: #191a1c;
+  background-color: #2E3848;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
