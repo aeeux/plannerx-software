@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import './index.css'
 import Board from './components/Board/Board'
 import AddBoard from './components/Editable/AddBoard'
@@ -7,7 +7,26 @@ import './App.css'
 import LogoImg from './components/images/PlannerX_Logo.svg'
 import ToggleSwitch from './ToggleSwitch.js'
 
+const LightTheme = {
+  pageBackground: '#F7F9FB',
+  titleColor: '#dc658b',
+  tagLineColor: 'black',
+}
+
+const DarkTheme = {
+  pageBackground: '#282c36',
+  titleColor: 'lightPink',
+  tagLineColor: 'lavender',
+}
+
+const themes = {
+  light: LightTheme,
+  dark: DarkTheme,
+}
+
 function App() {
+  const [theme, setTheme] = useState('light')
+
   const [boards, setBoards] = useState(
     JSON.parse(localStorage.getItem('PlannerX')) || [],
   )
@@ -123,48 +142,50 @@ function App() {
   }, [boards])
 
   return (
-    <AppBoardsContainer className="mx-auto">
-      <div className="app_nav">
-        <BoardTitle>
-          <BoardTitleh1 className="headerh1 text-3xl mb-20 font-semibold">
-            Kanban Board
-          </BoardTitleh1>
-        </BoardTitle>
-        <BoardUnderTitleh3>Created with 💜 by PlannerX</BoardUnderTitleh3>
-      </div>
+    <ThemeProvider theme={themes[theme]}>
+      <AppBoardsContainer className="mx-auto">
+        <div className="app_nav">
+          <BoardTitle>
+            <BoardTitleh1 className="headerh1 text-3xl mb-20 font-semibold">
+              Kanban Board
+            </BoardTitleh1>
+          </BoardTitle>
+          <BoardUnderTitleh3>Created with 💜 by PlannerX</BoardUnderTitleh3>
+        </div>
 
-      <AppBoardsAddCard className="mb-16 justify-between ">
-        <div className="flex space-x-5">
-          <img src={LogoImg} className="img-logo-header" alt="mockup" />
-          <button className="website-back-to">Go back to website</button>
+        <AppBoardsAddCard className="mb-16 justify-between ">
+          <div className="flex space-x-5">
+            <img src={LogoImg} className="img-logo-header" alt="mockup" />
+            <button className="website-back-to">Go back to website</button>
+          </div>
+          <div className="flex space-x-5">
+            <ToggleSwitch theme={theme} setTheme={setTheme} />
+            <AddBoard
+              displayClass="app_boards_add-board"
+              editClass="app_boards_add-board_edit"
+              placeholder="Enter Board Name"
+              text="Add Board"
+              buttonText="Add Board"
+              onSubmit={addboardHandler}
+            />
+          </div>
+        </AppBoardsAddCard>
+        <div className="grid gap-12 xsm:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {boards.map((item) => (
+            <Board
+              key={item.id}
+              board={item}
+              addCard={addCardHandler}
+              removeBoard={() => removeBoard(item.id)}
+              removeCard={removeCard}
+              dragEnded={dragEnded}
+              dragEntered={dragEntered}
+              updateCard={updateCard}
+            />
+          ))}
         </div>
-        <div className="flex space-x-5">
-          <ToggleSwitch />
-          <AddBoard
-            displayClass="app_boards_add-board"
-            editClass="app_boards_add-board_edit"
-            placeholder="Enter Board Name"
-            text="Add Board"
-            buttonText="Add Board"
-            onSubmit={addboardHandler}
-          />
-        </div>
-      </AppBoardsAddCard>
-      <div className="grid gap-12 xsm:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {boards.map((item) => (
-          <Board
-            key={item.id}
-            board={item}
-            addCard={addCardHandler}
-            removeBoard={() => removeBoard(item.id)}
-            removeCard={removeCard}
-            dragEnded={dragEnded}
-            dragEntered={dragEntered}
-            updateCard={updateCard}
-          />
-        ))}
-      </div>
-    </AppBoardsContainer>
+      </AppBoardsContainer>
+    </ThemeProvider>
   )
 }
 
@@ -196,6 +217,7 @@ const BoardUnderTitleh3 = styled.h1`
 const AppBoardsContainer = styled.div`
   max-width: 1600px;
   padding: 50px;
+  background-color: ${(props) => props.theme.pageBackground};
 `
 const AppBoardsAddCard = styled.div`
   display: flex;
