@@ -160,7 +160,7 @@ function CardInfo(props) {
                 style={{ backgroundColor: item.color, color: '#3E5352' }}
               >
                 {item.text}
-                <X onClick={() => removeLabel(item)} />
+                <X  className="cursor-pointer" onClick={() => removeLabel(item)} />
               </Label>
             ))}
           </CardInfoBoxLabels>
@@ -255,8 +255,8 @@ const CardInfoBoxLabels = styled.div`
   flex-wrap: wrap;
 `
 const Label = styled.div`
-  border-radius: 40px;
-  background-color: gray;
+  border-radius: 7px;
+  background-color: #DEFFE5;
   color: #fff;
   padding: 4px 8px;
   display: flex;
