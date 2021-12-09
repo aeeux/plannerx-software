@@ -5,15 +5,18 @@
 .editable_display {
   padding: 6px 12px;
   border-radius: 3px;
-  background-color: #eee;
-  color: #000;
+  background-color: #2E3848;
+  color: #eee;
   cursor: pointer;
   width: 100%;
-  transition: 200ms;
+  transition: 300ms ease-in-out;
+  text-align: center;
+  font-weight: bold;
 }
 
 .editable_display:hover {
-  background-color: #ddd;
+  background-color: #0f1013;
+  transition: 300ms ease-in-out;
 }
 
 .editable_edit {
