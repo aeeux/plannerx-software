@@ -4,7 +4,7 @@ import './index.css'
 import Board from './components/Board/Board'
 import AddBoard from './components/Editable/AddBoard'
 import './App.css'
-import LogoImg from './components/images/PlannerX_Logo.svg'
+import LogoImg from './components/images/Planner_X_sort_blat_x.svg'
 import ToggleSwitch from './ToggleSwitch.js'
 
 const LightTheme = {
@@ -237,7 +237,7 @@ const GlobalStyle = createGlobalStyle`
 
 const BoardTitle = styled.div`
   text-align: center;
-  margin-top: 3em;
+  margin-top: 0.2em;
   transition: all 1.2s ease;
 `
 
@@ -257,7 +257,7 @@ const BoardUnderTitleh3 = styled.h3`
   text-align: center;
   margin-top: 0;
   padding-top: 0;
-  margin-bottom: 7rem;
+  margin-bottom: 6.6rem;
   transition: all 1.2s ease;
 `
 
