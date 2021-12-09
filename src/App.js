@@ -220,7 +220,7 @@ const BoardTitleh1 = styled.h1`
 const BoardUnderTitleh3 = styled.h3`
   font-size: 1.3em;
   font-weight: light;
-  color: #a5a5a5;
+  color: ${(props) => props.theme.subTitleColor};
   text-align: center;
   margin-top: 0;
   padding-top: 0;
