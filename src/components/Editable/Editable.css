@@ -87,6 +87,6 @@
 }
 
 .add_board:hover {
-  background-color: rgb(10, 9, 9);
+  background-color: rgb(19, 16, 16);
   transition: 300ms ease-in-out;
 }
