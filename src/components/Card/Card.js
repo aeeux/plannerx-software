@@ -129,7 +129,7 @@ const CardTopLabels = styled.div`
   line-height: 21px;
 `
 const Label = styled.div`
-  border-radius: 40px;
+  border-radius: 8px;
   padding: 4px 12px;
   background-color: gray;
   color: #3E5352;
