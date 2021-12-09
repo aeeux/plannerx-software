@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { MoreHorizontal } from 'react-feather'
 import styled from 'styled-components'
+import AddBoard from "../Editable/AddBoard"
 
 import './Board.css'
 
@@ -41,7 +42,7 @@ function Board(props) {
             )}
           </BoardHeaderTitleMore>
         </BoardHeader>
-        <Editable
+        <AddBoard
           className=""
           text="+"
           placeholder="Enter Card Title"
