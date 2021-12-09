@@ -93,22 +93,23 @@ const BoardHeaderTitle = styled.div`
   display: flex;
   gap: 5px;
   align-items: center;
+  background-color: ${(props) => props.theme.BoardHeaderTitleColor};
 `
 
 const BoardHeaderAmount = styled.div`
   font-weight: bold;
   font-size: 1rem;
-  background-color: #2e3848;
+  background-color: ${(props) => props.theme.BoardHeaderAmountBackground};
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
-  color: #dde4eb;
+  color: ${(props) => props.theme.BoardHeaderAmountColor};
 `
 
 const BoardHeaderTitleMore = styled.div`
-  background-color: #f8f8f8;
+  background-color: ${(props) => props.theme.boardButtonToDeleteBackground};
   padding: 10px;
   border-radius: 50px;
   cursor: pointer;
@@ -120,7 +121,7 @@ const TaskItem = styled.div`
 `
 
 const BoardCards = styled.div`
-  background-color: #f8f8f8;
+  background-color: ${(props) => props.theme.boardCardsBackground};
   padding: 10px;
   border-radius: 5px;
   display: flex;
@@ -129,7 +130,7 @@ const BoardCards = styled.div`
   overflow-y: auto;
 `
 const BoardColor = styled.div`
-  background-color: #dce4ec;
+  background-color: ${(props) => props.theme.boardBackground};
   border-radius: 10px;
   padding: 10px;
   width: fit-content;
