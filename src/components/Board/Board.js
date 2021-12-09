@@ -3,8 +3,6 @@ import { MoreHorizontal } from 'react-feather'
 import styled from 'styled-components'
 import AddBoard from '../Editable/AddBoard'
 
-import './Board.css'
-
 import Card from '../Card/Card'
 import Dropdown from '../Dropdown/Dropdown'
 
@@ -45,8 +43,8 @@ function Board(props) {
           className=""
           text="+"
           placeholder="Enter Card Title"
-          displayClass="board_add-card"
-          editClass="board_add-card_edit"
+          displayClass=""
+          editClass=""
           onSubmit={(value) => props.addCard(props.board?.id, value)}
         />
         <BoardCards className=" custom-scroll">
