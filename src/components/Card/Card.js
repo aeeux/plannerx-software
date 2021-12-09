@@ -111,7 +111,7 @@ const CardItem = styled.div`
   cursor: move;
   flex-direction: column;
   gap: 10px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.cardItemBackground};
   border-radius: 10px;
   &hover {
     opacity: 1;
@@ -132,8 +132,8 @@ const CardTopLabels = styled.div`
 const Label = styled.div`
   border-radius: 8px;
   padding: 4px 12px;
-  background-color: #deffe5;
-  color: #3e5352;
+  background-color: ${(props) => props.theme.labelBackground};
+  color: ${(props) => props.theme.labelColor};
   width: fit-content;
 `
 const CardTopMore = styled.div`
@@ -159,8 +159,7 @@ const CardFooter = styled.div`
 const CardFooterItem = styled.div`
   border-radius: 40px;
   padding: 4px 12px;
-  background-color: #f8f8f8;
-  color: #000;
+  color: ${(props) => props.theme.cardDateAndTask};
   width: fit-content;
   font-size: 14px;
   line-height: 21px;

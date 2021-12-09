@@ -71,13 +71,14 @@ const EditableFooter = styled.div`
   display: flex;
   gap: 8px;
   align-items: center;
+  color: #B33F40;
 `
 
 const EditableDisplay = styled.div`
   padding: 6px 12px;
   border-radius: 3px;
-  background-color: #2e3848;
-  color: #eee;
+  background-color: ${(props) => props.theme.modalButtonsBackground};
+  color:  ${(props) => props.theme.modalButtonsText};
   cursor: pointer;
   width: 100%;
   transition: 300ms ease-in-out;
@@ -92,5 +93,6 @@ const EditableDisplay = styled.div`
 const EditableEdit = styled.form`
   display: flex;
   flex-direction: column;
+  color:  #000;
   gap: 10px;
 `

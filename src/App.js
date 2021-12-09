@@ -14,9 +14,15 @@ const LightTheme = {
   addButtonsbackground: '#2E3848',
   addButtonstext: '#FFFFFF',
   cardsAmount: '#2E3848',
+  modalButtonsBackground: '#2E3848',
+  modalButtonsText: '#FFFFFF',
   modalBackground: '#F7F9FB',
   modalText: '#181717',
   modalInput: '#181717',
+  cardDateAndTask: '#000',
+  labelColor: '#3E5352',
+  labelBackground: '#DEFFE5',
+  cardItemBackground: '#FFF',
 
 }
 
@@ -27,9 +33,15 @@ const DarkTheme = {
   addButtonsbackground: '#949FB0',
   addButtonstext: '#FFF',
   cardsAmount: '#2E3848',
+  modalButtonsBackground: '#2E3848',
+  modalButtonsText: '#FEFEFE',
   modalBackground: '#2E3848',
   modalText: '#FFFFFF',
   modalInput: '#181717',
+  cardDateAndTask: '#000',
+  labelColor: '#3E5352',
+  labelBackground: '#DEFFE5',
+  cardItemBackground: '#FFF',
 }
 
 const themes = {
