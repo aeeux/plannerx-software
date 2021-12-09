@@ -32,6 +32,7 @@ function Editable(props) {
             onChange={(event) => setInputText(event.target.value)}
             autoFocus
           />
+
           <EditableFooter className="">
             <button
               className="cursor-pointer border-solid rounded-lg p-3 bg-blue-500 outline-none text-white transition ease-in-out hover:bg-blue-200"
@@ -46,14 +47,16 @@ function Editable(props) {
           </EditableFooter>
         </form>
       ) : (
-        <p
-          className={`editable_display ${
-            props.displayClass ? props.displayClass : ''
-          }`}
-          onClick={() => setIsEditable(true)}
-        >
-          {props.text}
-        </p>
+        <div>
+          <p
+            className={`editable_display ${
+              props.displayClass ? props.displayClass : ''
+            }`}
+            onClick={() => setIsEditable(true)}
+          >
+            {props.text}
+          </p>
+        </div>
       )}
     </EditableItem>
   )
