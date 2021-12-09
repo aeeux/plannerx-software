@@ -28,6 +28,7 @@ const LightTheme = {
   boardButtonToDeleteBackground: '#F8F8F8',
   BoardHeaderAmountBackground: '#2e3848',
   BoardHeaderAmountColor: '#dde4eb',
+  BoardHeaderTitleColor: '#dde4eb',
 }
 
 const DarkTheme = {
@@ -51,6 +52,7 @@ const DarkTheme = {
   boardButtonToDeleteBackground: '#F8F8F8',
   BoardHeaderAmountBackground: '#2e3848',
   BoardHeaderAmountColor: '#dde4eb',
+  BoardHeaderTitleColor: '#dde4eb',
 }
 
 const themes = {
@@ -229,12 +231,14 @@ export default App
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.pageBackground};
+    transition: all 1.2s ease;
   }
 `
 
 const BoardTitle = styled.div`
   text-align: center;
   margin-top: 3em;
+  transition: all 1.2s ease;
 `
 
 const BoardTitleh1 = styled.h1`
@@ -243,6 +247,7 @@ const BoardTitleh1 = styled.h1`
   color: ${(props) => props.theme.titleColor};
   margin-bottom: 20px;
   padding-bottom: 0;
+  transition: all 1.2s ease;
 `
 
 const BoardUnderTitleh3 = styled.h3`
@@ -253,12 +258,15 @@ const BoardUnderTitleh3 = styled.h3`
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 7rem;
+  transition: all 1.2s ease;
 `
 
 const AppBoardsContainer = styled.div`
   max-width: 1600px;
   padding: 50px;
+  transition: all 1.2s ease;
 `
 const AppBoardsAddCard = styled.div`
   display: flex;
+  transition: all 1.2s ease;
 `
