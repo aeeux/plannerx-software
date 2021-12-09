@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import './index.css'
 import Board from './components/Board/Board'
 import Editable from './components/Editable/Editable'
+import "./App.css"
+import LogoImg from "./components/images/PlannerX_Logo.svg"
+import ToggleSwitch from "./ToggleSwitch.js";
 
 function App() {
   const [boards, setBoards] = useState(
@@ -132,12 +135,12 @@ function App() {
 
       <AppBoardsAddCard className="mb-16 justify-between ">
         <div className="flex space-x-5">
-          <h2 className="bg-yellow-500">LOGO HERE</h2>
-          <h2 className="bg-blue-400">Go back to website</h2>
+        <img src={LogoImg} className="img-logo-header" alt="mockup" />
+          <button className="website-back-to">Go back to website</button>
         </div>
         <div className="flex space-x-5">
-          <h2 className="bg-yellow-500">Dark/Light Mode here</h2>
-          <Editable
+        <ToggleSwitch />
+          <Editable id="add-board-button"
             displayClass="app_boards_add-board"
             editClass="app_boards_add-board_edit"
             placeholder="Enter Board Name"
