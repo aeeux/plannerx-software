@@ -132,7 +132,7 @@ const Label = styled.div`
   border-radius: 40px;
   padding: 4px 12px;
   background-color: gray;
-  color: #fff;
+  color: #3E5352;
   width: fit-content;
 `
 const CardTopMore = styled.div`
