@@ -27,12 +27,13 @@ export default ToggleSwitch
 
 const Toggle = styled.button`
   cursor: pointer;
+  padding-left: 5px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: none;
-  background-color: ${(props) => props.theme.titleColor};
-  color: ${(props) => props.theme.titleColor};
+  background-color: ${(props) => props.theme.addButtonsbackground};
+  color: #fff;
   &:focus {
     outline: none;
   }
