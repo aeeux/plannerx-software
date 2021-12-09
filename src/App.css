@@ -25,7 +25,7 @@
   .toggle-switch {
     position: relative;
     display: inline-block;
-    width: 120px;
+    width: 74px;
     height: 45px;
   }
   .toggle-switch input[type="checkbox"] {
