@@ -131,7 +131,7 @@ const CardTopLabels = styled.div`
 const Label = styled.div`
   border-radius: 8px;
   padding: 4px 12px;
-  background-color: gray;
+  background-color: #DEFFE5;
   color: #3E5352;
   width: fit-content;
 `
