@@ -23,6 +23,7 @@
 .description-text-edit{
     font-weight: 300 !important;
     color: #a4a5a7 !important;
+    margin-top: -14px !important;
 }
   /*toggle*/
   .toggle-switch {
