@@ -4,7 +4,7 @@ import './index.css'
 import Board from './components/Board/Board'
 import AddBoard from './components/Editable/AddBoard'
 import './App.css'
-import LogoImg from './components/images/Planner_X_sort_blat_x.svg'
+import Logo from './components/images/Logo.svg'
 import ToggleSwitch from './ToggleSwitch.js'
 
 const LightTheme = {
@@ -192,7 +192,13 @@ function App() {
 
         <AppBoardsAddCard className="mb-16 justify-between ">
           <div className="flex space-x-5">
-            <img src={LogoImg} className="img-logo-header" alt="mockup" />
+            <img
+              viewBox="0 0 863.29 543"
+              src={Logo}
+              className="img-logo-header"
+              alt="mockup"
+            />
+
             <button className="website-back-to">Go back to website</button>
           </div>
           <div className="flex space-x-5">
