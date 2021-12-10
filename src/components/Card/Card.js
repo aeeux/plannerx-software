@@ -6,6 +6,9 @@ import Dropdown from '../Dropdown/Dropdown'
 
 import CardInfo from './CardInfo/CardInfo'
 
+import Delete from '../images/Delete.svg';
+
+
 function Card(props) {
   const [showDropdown, setShowDropdown] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -74,12 +77,14 @@ function Card(props) {
             <MoreHorizontal className="" />
             {showDropdown && (
               <Dropdown
-                class="board_dropdown"
+                class="board_dropdown delete-button-card"
                 onClose={() => setShowDropdown(false)}
               >
-                <p className="p-2" onClick={() => props.removeCard(props.boardId, id)}>
-                  Delete Card
+                <div className="delete-button-card">
+                <p className="p-0 m-2" onClick={() => props.removeCard(props.boardId, id)}>
+                <img className="w-8 mx-auto" src={Delete} alt="Delete" />
                 </p>
+                </div>
               </Dropdown>
             )}
           </CardTopMore>
