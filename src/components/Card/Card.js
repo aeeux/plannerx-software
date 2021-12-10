@@ -6,8 +6,7 @@ import Dropdown from '../Dropdown/Dropdown'
 
 import CardInfo from './CardInfo/CardInfo'
 
-import Delete from '../images/Delete.svg';
-
+import Delete from '../images/Delete.svg'
 
 function Card(props) {
   const [showDropdown, setShowDropdown] = useState(false)
@@ -58,14 +57,12 @@ function Card(props) {
         onClick={() => setShowModal(true)}
       >
         <CardTop className="">
-          <CardTopLabels className="">
+          <CardTopLabels className="cursor-pointer">
             {labels?.map((item, index) => (
-              
-          <CardTopLabelsli className="cursor-pointer"><Label key={index} style={{ backgroundColor: item.color }}>
+              <Label key={index} style={{ backgroundColor: item.color }}>
                 {item.text}
-              </Label></CardTopLabelsli>
+              </Label>
             ))}
-           
           </CardTopLabels>
           <CardTopMore
             className=""
@@ -81,16 +78,21 @@ function Card(props) {
                 onClose={() => setShowDropdown(false)}
               >
                 <div className="delete-button-card">
-                <p className="p-0 m-2" onClick={() => props.removeCard(props.boardId, id)}>
-                <img className="w-8 mx-auto" src={Delete} alt="Delete" />
-                </p>
+                  <p
+                    className="p-0 m-2"
+                    onClick={() => props.removeCard(props.boardId, id)}
+                  >
+                    <img className="w-8 mx-auto" src={Delete} alt="Delete" />
+                  </p>
                 </div>
               </Dropdown>
             )}
           </CardTopMore>
         </CardTop>
         <CardTitle className="cursor-pointer">{title}</CardTitle>
-        <CardTitle className="description-text-edit cursor-pointer">{desc}</CardTitle>
+        <CardTitle className="description-text-edit cursor-pointer">
+          {desc}
+        </CardTitle>
         <CardFooter className="">
           {date && (
             <CardFooterItem className="cursor-pointer">
@@ -137,13 +139,10 @@ const CardTopLabels = styled.div`
   font-size: 14px;
   line-height: 21px;
 `
-const CardTopLabelsli = styled.li`
-display: flex;
-`
 
 const Label = styled.li`
-display: flex;
-list-style-type: disc;
+  display: flex;
+  list-style-type: disc;
   border-radius: 8px;
   padding: 4px 12px;
   background-color: ${(props) => props.theme.labelBackground};
@@ -180,5 +179,5 @@ const CardFooterItem = styled.div`
   display: flex;
   gap: 5px;
   align-items: center;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 `
