@@ -6,8 +6,6 @@ import Dropdown from '../Dropdown/Dropdown'
 
 import CardInfo from './CardInfo/CardInfo'
 
-import Delete from '../images/Delete.svg'
-
 function Card(props) {
   const [showDropdown, setShowDropdown] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -82,7 +80,7 @@ function Card(props) {
                     className="p-0 m-2"
                     onClick={() => props.removeCard(props.boardId, id)}
                   >
-                    <img className="w-8 mx-auto" src={Delete} alt="Delete" />
+                    Delete
                   </p>
                 </div>
               </Dropdown>
