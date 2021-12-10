@@ -57,10 +57,12 @@ function Card(props) {
         <CardTop className="">
           <CardTopLabels className="">
             {labels?.map((item, index) => (
-              <Label key={index} style={{ backgroundColor: item.color }}>
+              
+          <CardTopLabelsli className=""><Label key={index} style={{ backgroundColor: item.color }}>
                 {item.text}
-              </Label>
+              </Label></CardTopLabelsli>
             ))}
+           
           </CardTopLabels>
           <CardTopMore
             className=""
@@ -129,7 +131,13 @@ const CardTopLabels = styled.div`
   font-size: 14px;
   line-height: 21px;
 `
-const Label = styled.div`
+const CardTopLabelsli = styled.li`
+display: flex;
+`
+
+const Label = styled.li`
+display: flex;
+list-style-type: disc;
   border-radius: 8px;
   padding: 4px 12px;
   background-color: ${(props) => props.theme.labelBackground};
@@ -166,4 +174,5 @@ const CardFooterItem = styled.div`
   display: flex;
   gap: 5px;
   align-items: center;
+  background-color: #F8F8F8;
 `
