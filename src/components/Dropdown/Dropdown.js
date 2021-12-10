@@ -35,12 +35,12 @@ export default Dropdown
 
 const DropownItem = styled.div`
   position: absolute;
-  right: 0;
+  right: 30%;
   top: 100%;
   background-color: #fff;
   border-radius: 40px 10px 90px 40px;
   min-height: 40px;
-  min-width: 80px;
+  min-width: 50px;
   width: fit-content;
   height: fit-content;
   max-width: 250px;
