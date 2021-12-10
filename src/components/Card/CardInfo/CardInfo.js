@@ -297,7 +297,7 @@ const CardInfoBoxTaskCheckbox = styled.div`
 
 const CardInfoBoxDate = styled.input`
   width: fit-content;
-  border: 2px solid #ddd;
+  border: 2px solid #dde4eb;
   border-radius: 5px;
   outline: none;
   font-size: 1rem;

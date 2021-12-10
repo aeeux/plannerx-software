@@ -12,7 +12,7 @@ function ToggleSwitch(props) {
   }
 
   const icon =
-    props.theme === 'light' ? <HiMoon size={40} /> : <CgSun size={40} />
+    props.theme === 'light' ? <HiMoon size={28} /> : <CgSun size={28} />
 
   return (
     <Page>
@@ -27,9 +27,9 @@ export default ToggleSwitch
 
 const Toggle = styled.button`
   cursor: pointer;
-  padding-left: 5px;
-  height: 50px;
-  width: 50px;
+  padding-left: 4px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
   border: none;
   background-color: ${(props) => props.theme.addButtonsbackground};
@@ -38,6 +38,7 @@ const Toggle = styled.button`
     outline: none;
   }
   transition: all 1.2s ease;
+  margin-bottom: 6px;
 `
 
 const Page = styled.div`
@@ -52,4 +53,5 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 1.2s ease;
 `
