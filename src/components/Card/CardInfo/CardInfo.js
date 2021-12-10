@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Calendar, CheckSquare, List, Tag, Trash, Type, X } from 'react-feather'
 import styled from 'styled-components'
+import Confetti from 'react-confetti'
 
 import Modal from '../../Modal/Modal'
 import Editable from '../../Editable/Editable'
@@ -198,8 +199,12 @@ function CardInfo(props) {
                 width: `${calculatePercent()}%`,
                 backgroundColor: calculatePercent() === 100 ? 'limegreen' : '',
               }}
-            />
+            ></CardInfoBoxProgress>
           </CardInfoBoxProgressBar>
+          <Confetti
+            run={calculatePercent() === 100 ? true : false}
+            recycle={calculatePercent() === 100 ? false : false}
+          />
           <CardInfoBoxTaskList className="cardinfo_box_task_list">
             {values.tasks?.map((item) => (
               <CardInfoBoxTaskCheckbox
