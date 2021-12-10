@@ -83,7 +83,7 @@ function Card(props) {
           </CardTopMore>
         </CardTop>
         <CardTitle className="">{title}</CardTitle>
-        <CardTitle className="">{desc}</CardTitle>
+        <CardTitle className="description-text-edit">{desc}</CardTitle>
         <CardFooter className="">
           {date && (
             <CardFooterItem className="">

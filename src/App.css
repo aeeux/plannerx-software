@@ -20,7 +20,10 @@
       width: 65px;
       height: auto;
   }
-
+.description-text-edit{
+    font-weight: 300 !important;
+    color: #a4a5a7 !important;
+}
   /*toggle*/
   .toggle-switch {
     position: relative;
