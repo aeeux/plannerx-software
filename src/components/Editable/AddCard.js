@@ -76,7 +76,7 @@ const EditableFooter = styled.div`
 
 const EditableCardDisplay = styled.div`
   padding: 6px 12px;
-  border-radius: 3px;
+  border-radius: 90px;
   background-color: ${(props) => props.theme.modalButtonsBackground};
   color: ${(props) => props.theme.modalButtonsText};
   cursor: pointer;
