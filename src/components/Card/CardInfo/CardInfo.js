@@ -142,6 +142,7 @@ function CardInfo(props) {
             <p className="font-bold text-lg">Date</p>
           </CardInfoBoxTitle>
           <CardInfoBoxDate
+          className="cursor-pointer"
             type="date"
             defaultValue={values.date}
             min={new Date().toISOString().substr(0, 10)}
@@ -219,8 +220,8 @@ function CardInfo(props) {
                     updateTask(item.id, event.target.checked)
                   }
                 />
-                <p className={item.completed ? 'completed' : ''}>{item.text}</p>
-                <Trash onClick={() => removeTask(item.id)} />
+                <p className= {item.completed ? 'completed' : ''}>{item.text}</p>
+                <Trash className="cursor-pointer" onClick={() => removeTask(item.id)} />
               </CardInfoBoxTaskCheckbox>
             ))}
           </CardInfoBoxTaskList>
