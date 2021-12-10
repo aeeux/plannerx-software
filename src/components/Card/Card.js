@@ -58,7 +58,7 @@ function Card(props) {
           <CardTopLabels className="">
             {labels?.map((item, index) => (
               
-          <CardTopLabelsli className=""><Label key={index} style={{ backgroundColor: item.color }}>
+          <CardTopLabelsli className="cursor-pointer"><Label key={index} style={{ backgroundColor: item.color }}>
                 {item.text}
               </Label></CardTopLabelsli>
             ))}
@@ -84,17 +84,17 @@ function Card(props) {
             )}
           </CardTopMore>
         </CardTop>
-        <CardTitle className="">{title}</CardTitle>
-        <CardTitle className="description-text-edit">{desc}</CardTitle>
+        <CardTitle className="cursor-pointer">{title}</CardTitle>
+        <CardTitle className="description-text-edit cursor-pointer">{desc}</CardTitle>
         <CardFooter className="">
           {date && (
-            <CardFooterItem className="">
+            <CardFooterItem className="cursor-pointer">
               <Clock className="" />
               {formatDate(date)}
             </CardFooterItem>
           )}
           {tasks && tasks?.length > 0 && (
-            <CardFooterItem className="">
+            <CardFooterItem className="cursor-pointer">
               <CheckSquare className="h-13 w-13" />
               {tasks?.filter((item) => item.completed)?.length}/{tasks?.length}
             </CardFooterItem>
