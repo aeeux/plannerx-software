@@ -32,7 +32,7 @@ const LightTheme = {
 }
 
 const DarkTheme = {
-  pageBackground: '#2E3848',
+  pageBackground: '#0a0a0a',
   titleColor: '#F3F6FA',
   subTitleColor: '#D1CACA',
   addButtonsbackground: '#949FB0',
@@ -46,9 +46,9 @@ const DarkTheme = {
   cardDateAndTask: '#000',
   labelColor: '#3E5352',
   labelBackground: '#DEFFE5',
-  cardItemBackground: '#FFF',
-  boardBackground: '#dce4ec',
-  boardCardsBackground: '#f8f8f8',
+  cardItemBackground: '#fbfbfb',
+  boardBackground: '#212124',
+  boardCardsBackground: '#2c2c2f',
   boardButtonToDeleteBackground: '#F8F8F8',
   BoardHeaderAmountBackground: '#2e3848',
   BoardHeaderAmountColor: '#dde4eb',
@@ -198,7 +198,12 @@ function App() {
               className="img-logo-header"
               alt="mockup"
             />
-            <a href="https://planner-x.netlify.app/" className="website-back-to my-auto">Go back to website</a>
+            <a
+              href="https://planner-x.netlify.app/"
+              className="website-back-to my-auto"
+            >
+              Go back to website
+            </a>
           </div>
           <div className="flex space-x-5">
             <ToggleSwitch theme={theme} setTheme={setTheme} />
