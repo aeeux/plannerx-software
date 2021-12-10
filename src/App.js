@@ -198,7 +198,6 @@ function App() {
               className="img-logo-header"
               alt="mockup"
             />
-
             <button className="website-back-to">Go back to website</button>
           </div>
           <div className="flex space-x-5">
