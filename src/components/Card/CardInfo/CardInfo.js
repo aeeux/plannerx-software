@@ -142,7 +142,7 @@ function CardInfo(props) {
             <p className="font-bold text-lg">Date</p>
           </CardInfoBoxTitle>
           <CardInfoBoxDate
-          className="cursor-pointer"
+            className="cursor-pointer"
             type="date"
             defaultValue={values.date}
             min={new Date().toISOString().substr(0, 10)}
@@ -172,7 +172,7 @@ function CardInfo(props) {
           <ul className="gap-1 flex space-x-3">
             {colors.map((item, index) => (
               <li
-                className="list-none w-18 h-18 rounded-lg cursor-pointer "
+                className="list-none w-18 h-18 p-3 rounded-lg cursor-pointer"
                 key={index + item}
                 style={{ backgroundColor: item }}
                 onClick={() => setSelectedColor(item)}
@@ -220,8 +220,11 @@ function CardInfo(props) {
                     updateTask(item.id, event.target.checked)
                   }
                 />
-                <p className= {item.completed ? 'completed' : ''}>{item.text}</p>
-                <Trash className="cursor-pointer" onClick={() => removeTask(item.id)} />
+                <p className={item.completed ? 'completed' : ''}>{item.text}</p>
+                <Trash
+                  className="cursor-pointer"
+                  onClick={() => removeTask(item.id)}
+                />
               </CardInfoBoxTaskCheckbox>
             ))}
           </CardInfoBoxTaskList>
