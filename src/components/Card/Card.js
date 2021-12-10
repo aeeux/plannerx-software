@@ -112,6 +112,7 @@ const CardItem = styled.div`
   display: flex;
   cursor: move;
   flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 3.5px 10px 0px;
   gap: 10px;
   background-color: ${(props) => props.theme.cardItemBackground};
   border-radius: 10px;
@@ -174,5 +175,5 @@ const CardFooterItem = styled.div`
   display: flex;
   gap: 5px;
   align-items: center;
-  background-color: #F8F8F8;
+  background-color: #F7F7F7;
 `
