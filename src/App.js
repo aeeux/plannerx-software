@@ -180,10 +180,10 @@ function App() {
   return (
     <ThemeProvider theme={themes[theme]}>
       <GlobalStyle />
-      <AppBoardsContainer className="mx-auto">
+      <AppBoardsContainer className="mx-auto ">
         <div className="app_nav">
           <BoardTitle>
-            <BoardTitleh1 className="headerh1 text-3xl mb-20 font-semibold">
+            <BoardTitleh1 className="headerh1 text-3xl font-semibold">
               Kanban Board
             </BoardTitleh1>
           </BoardTitle>
