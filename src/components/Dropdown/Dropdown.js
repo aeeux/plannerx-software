@@ -38,7 +38,6 @@ const DropownItem = styled.div`
   right: 30%;
   top: 100%;
   background-color: #fff;
-  border-radius: 40px 10px 90px 40px;
   min-height: 40px;
   min-width: 50px;
   width: fit-content;
