@@ -38,7 +38,7 @@ const DropownItem = styled.div`
   right: 0;
   top: 100%;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 40px 10px 90px 40px;
   min-height: 40px;
   min-width: 80px;
   width: fit-content;
@@ -47,4 +47,5 @@ const DropownItem = styled.div`
   max-height: 390px;
   overflow-y: auto;
   z-index: 5;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `
