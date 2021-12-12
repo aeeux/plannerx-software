@@ -50,7 +50,7 @@ function Board(props) {
         />
         <BoardCards className=" custom-scroll">
           {props.board?.cards?.map((item) => (
-            <TaskItem>
+            <TaskItem key={item.id}>
               <Card
                 key={item.id}
                 card={item}
