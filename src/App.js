@@ -26,7 +26,7 @@ const LightTheme = {
   boardBackground: '#dce4ec',
   boardCardsBackground: '#f8f8f8',
   boardButtonToDeleteBackground: '',
-  BoardHeaderAmountBackground: '#2e3848',
+  BoardHeaderAmountBackground: '#2E3848',
   BoardHeaderAmountColor: '#dde4eb',
   BoardHeaderTitleColor: '#000',
 }
@@ -48,9 +48,9 @@ const DarkTheme = {
   labelBackground: '#DEFFE5',
   cardItemBackground: '#fbfbfb',
   boardBackground: '#4d5969',
-  boardCardsBackground: '#2e3848',
+  boardCardsBackground: '#2E3848',
   boardButtonToDeleteBackground: '#fff',
-  BoardHeaderAmountBackground: '#2e3848',
+  BoardHeaderAmountBackground: '#2E3848',
   BoardHeaderAmountColor: '#dde4eb',
   BoardHeaderTitleColor: '#fff',
 }
