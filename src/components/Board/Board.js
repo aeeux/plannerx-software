@@ -94,7 +94,7 @@ const BoardHeaderTitle = styled.div`
   display: flex;
   gap: 5px;
   align-items: center;
-  background-color: ${(props) => props.theme.BoardHeaderTitleColor};
+  color: ${(props) => props.theme.BoardHeaderTitleColor};
 `
 
 const BoardHeaderAmount = styled.div`
