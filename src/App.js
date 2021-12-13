@@ -23,7 +23,7 @@ const LightTheme = {
   labelColor: '#3E5352',
   labelBackground: '#DEFFE5',
   cardItemBackground: '#FFF',
-  boardBackground: '#dce4ec',
+  boardBackground: '#0E1726',
   boardCardsBackground: '#f8f8f8',
   boardButtonToDeleteBackground: '',
   BoardHeaderAmountBackground: '#2e3848',
