@@ -32,7 +32,7 @@ const LightTheme = {
 }
 
 const DarkTheme = {
-  pageBackground: '#0a0a0a',
+  pageBackground: '#0E1726',
   titleColor: '#F3F6FA',
   subTitleColor: '#D1CACA',
   addButtonsbackground: '#949FB0',
