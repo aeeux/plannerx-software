@@ -33,7 +33,7 @@ const LightTheme = {
 
 const DarkTheme = {
   pageBackground: '#0E1726',
-  titleColor: '#F3F6FA',
+  titleColor: '#8279C6',
   subTitleColor: '#D1CACA',
   addButtonsbackground: '#949FB0',
   addButtonstext: '#FFF',
@@ -47,8 +47,8 @@ const DarkTheme = {
   labelColor: '#3E5352',
   labelBackground: '#DEFFE5',
   cardItemBackground: '#fbfbfb',
-  boardBackground: '#212124',
-  boardCardsBackground: '#2c2c2f',
+  boardBackground: 'linear-gradient(#C19A9E, #6A639C);',
+  boardCardsBackground: '',
   boardButtonToDeleteBackground: '',
   BoardHeaderAmountBackground: '#2e3848',
   BoardHeaderAmountColor: '#dde4eb',

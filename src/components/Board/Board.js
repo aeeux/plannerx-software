@@ -131,6 +131,7 @@ const BoardCards = styled.div`
   overflow-y: auto;
 `
 const BoardColor = styled.div`
+  background-image: ${(props) => props.theme.boardBackground};
   background-color: ${(props) => props.theme.boardBackground};
   border-radius: 10px;
   padding: 10px;
