@@ -31,6 +31,9 @@ const ModalItem = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 20;
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `
 const ModalContent = styled.div`
   overflow-y: auto;
@@ -38,4 +41,7 @@ const ModalContent = styled.div`
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.12);
+  @media (max-width: 425px) {
+    max-height: 50vh;
+  }
 `
