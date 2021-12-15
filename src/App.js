@@ -4,7 +4,6 @@ import './index.css'
 import Board from './components/Board/Board'
 import AddBoard from './components/Editable/AddBoard'
 import './App.css'
-import Logo from './components/images/Logo.svg'
 import ToggleSwitch from './ToggleSwitch.js'
 
 const LightTheme = {
@@ -192,17 +191,11 @@ function App() {
 
         <AppBoardsAddCard className="mb-16 justify-between ">
           <div className="flex space-x-5">
-            <img
-              viewBox="0 0 863.29 543"
-              src={Logo}
-              className="img-logo-header"
-              alt="mockup"
-            />
             <a
               href="https://planner-x.netlify.app/"
-              className="website-back-to my-auto"
+              className="website-back-to my-auto hidden lg:block"
             >
-              Go back to website
+              About PlannerX
             </a>
           </div>
           <div className="flex space-x-5">
@@ -217,7 +210,7 @@ function App() {
             />
           </div>
         </AppBoardsAddCard>
-        <div className="grid gap-12 xsm:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-12 xsm:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
           {boards.map((item) => (
             <Board
               key={item.id}
