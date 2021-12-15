@@ -109,9 +109,9 @@ function CardInfo(props) {
 
   return (
     <Modal onClose={props.onClose}>
-      <CardElement className="cardinfo">
-        <CardInfoBox className="cardinfo_box">
-          <CardInfoBoxTitle className="cardinfo_box_title">
+      <CardElement className="">
+        <CardInfoBox className="">
+          <CardInfoBoxTitle className="">
             <Type className="h-18 w-18 cursor-pointer" />
             <p className="font-bold text-lg">Title</p>
           </CardInfoBoxTitle>
@@ -123,8 +123,8 @@ function CardInfo(props) {
           />
         </CardInfoBox>
 
-        <CardInfoBox className="cardinfo_box">
-          <CardInfoBoxTitle className="cardinfo_box_title">
+        <CardInfoBox className="">
+          <CardInfoBoxTitle className="">
             <List className="h-18 w-18 cursor-pointer" />
             <p className="font-bold text-lg">Description</p>
           </CardInfoBoxTitle>
@@ -136,8 +136,8 @@ function CardInfo(props) {
           />
         </CardInfoBox>
 
-        <CardInfoBox className="cardinfo_box">
-          <CardInfoBoxTitle className="cardinfo_box_title">
+        <CardInfoBox className="">
+          <CardInfoBoxTitle className="">
             <Calendar className="w-6 cursor-pointer" />
             <p className="font-bold text-lg">Date</p>
           </CardInfoBoxTitle>
@@ -150,8 +150,8 @@ function CardInfo(props) {
           />
         </CardInfoBox>
 
-        <CardInfoBox className="cardinfo_box">
-          <CardInfoBoxTitle className="cardinfo_box_title">
+        <CardInfoBox className="">
+          <CardInfoBoxTitle className="">
             <Tag className="h-18 w-18 cursor-pointer " />
             <p className="font-bold text-lg">Labels</p>
           </CardInfoBoxTitle>
@@ -188,8 +188,8 @@ function CardInfo(props) {
           />
         </CardInfoBox>
 
-        <CardInfoBox className="cardinfo_box">
-          <CardInfoBoxTitle className="cardinfo_box_title">
+        <CardInfoBox className="">
+          <CardInfoBoxTitle className="">
             <CheckSquare className="h-18 w-18 cursor-pointer " />
             <p className="font-bold text-lg">Tasks</p>
           </CardInfoBoxTitle>
@@ -246,10 +246,12 @@ const CardElement = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
-  min-width: 550px;
   width: fit-content;
   max-width: 650px;
   height: fit-content;
+  @media (min-width: 550px) {
+    min-width: 550px;
+  }
 `
 const CardInfoBox = styled.div`
   width: 100%;
@@ -277,7 +279,7 @@ const Label = styled.div`
   gap: 5px;
 `
 const CardInfoBoxProgressBar = styled.div`
-  width: 100%;
+  width: 60%;
   border-radius: 30px;
   height: 10px;
   border: 1px solid #ccc;
