@@ -289,7 +289,7 @@ const CardInfoBoxProgress = styled.div`
   border-radius: 30px;
   background-color: skyblue;
   width: 0;
-  transition: 200ms;
+  transition: all 0.3s ease;
 `
 const CardInfoBoxTaskList = styled.div`
   display: flex;

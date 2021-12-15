@@ -81,13 +81,13 @@ const EditableBoardDisplay = styled.div`
   color: ${(props) => props.theme.addButtonstext};
   cursor: pointer;
   width: 100%;
-  transition: 300ms ease-in-out;
+  transition: all 0.3s ease;
   text-align: center;
   font-weight: bold;
   &:hover {
     background-color: rgb(19, 16, 16);
     color: #eee;
-    transition: 300ms ease-in-out;
+    transition: all 0.3s ease;
   }
 `
 

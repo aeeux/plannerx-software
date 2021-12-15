@@ -154,7 +154,7 @@ const CardTopMore = styled.div`
   flex: 1;
   cursor: pointer;
   opacity: 1;
-  transition: 200ms;
+  transition: all 0.3s ease;
 `
 const CardTitle = styled.div`
   flex: 1;

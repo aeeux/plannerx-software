@@ -37,7 +37,7 @@ const Toggle = styled.button`
   &:focus {
     outline: none;
   }
-  transition: all 1.2s ease;
+  transition: all 0.3s ease;
   margin-bottom: 6px;
 `
 
@@ -46,12 +46,12 @@ const Page = styled.div`
   justify-content: center;
   align-items: center;
   background-color: none;
-  transition: all 1.2s ease;
+  transition: all 0.3s ease;
 `
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 1.2s ease;
+  transition: all 0.3s ease;
 `
