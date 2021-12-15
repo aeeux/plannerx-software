@@ -26,7 +26,7 @@ function Editable(props) {
           onSubmit={submission}
         >
           <input
-            className="b-2 border-solid rounded-lg p-10 border-blue-500 outline-none"
+            className="b-2 border-solid rounded-lg p-4 border-blue-500 outline-none"
             type="text"
             value={inputText}
             placeholder={props.placeholder || props.text}
@@ -71,7 +71,7 @@ const EditableFooter = styled.div`
   display: flex;
   gap: 8px;
   align-items: center;
-  color: #B33F40;
+  color: #b33f40;
 `
 
 const EditableBoardDisplay = styled.div`
