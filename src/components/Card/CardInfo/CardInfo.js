@@ -279,7 +279,7 @@ const Label = styled.div`
   gap: 5px;
 `
 const CardInfoBoxProgressBar = styled.div`
-  width: 60%;
+  width: 100%;
   border-radius: 30px;
   height: 10px;
   border: 1px solid #ccc;
